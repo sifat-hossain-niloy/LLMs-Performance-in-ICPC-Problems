@@ -1,0 +1,39 @@
+Problem H
+Mining Your Own Business
+
+Problem ID: mining
+John Digger owns a mine with a series of tunnels meeting at various junctions. He wants to install the minimum number of escape shafts so that, if any junction collapses, all surviving workers can escape. The goal is to minimize the number of shafts while ensuring that every junction collapse allows an escape route.
+
+Input
+
+The input consists of several test cases. Each test case starts with a positive integer N, indicating the number of tunnels (N ≤ 5 · 10^4). Then follow N lines, each containing two distinct integers s and t, where s and t are junction numbers. The junctions are numbered consecutively starting from 1. Each pair of junctions is joined by at most one tunnel, and all junctions form a connected network.
+
+The last test case is followed by a line containing a single zero.
+
+Output
+
+For each test case, display its case number, followed by the minimum number of escape shafts needed and the number of ways these shafts can be installed. You may assume the result fits in a signed 64-bit integer.
+
+Sample input:
+9
+1 3
+4 1
+3 5
+1 2
+2 6
+1 5
+6 3
+1 6
+3 2
+6
+1 2
+1 3
+2 4
+2 5
+3 6
+3 7
+0
+
+Sample output:
+Case 1: 2 4
+Case 2: 4 1

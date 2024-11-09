@@ -1,0 +1,33 @@
+Problem E
+Infiltration
+
+Problem ID: infiltration
+The Association of Chaos and Mischief (ACM) has a command structure divided into cells, with each cell potentially controlling another. Cycles are allowed in the control relations. To infiltrate ACM, control over all cells is required, which can be achieved by sending agents to specific cells to take control of them and their subordinate cells. The goal is to minimize the number of cells to infiltrate.
+
+Input
+
+The first line of each test case contains the integer n (1 ≤ n ≤ 75), representing the number of cells. Each of the next n lines contains a binary string of length n, where the ith character of the jth line is '1' if cell j controls cell i, and '0' otherwise.
+
+Output
+
+For each test case, display its case number followed by the minimum number of cells that need to be infiltrated to take control of all cells. If there are multiple solutions, any one is accepted.
+
+Sample input:
+2
+00
+10
+3
+010
+001
+100
+5
+01000
+00011
+11001
+10100
+10010
+
+Sample output:
+Case 1: 1 2
+Case 2: 2 1 2
+Case 3: 2 2 3

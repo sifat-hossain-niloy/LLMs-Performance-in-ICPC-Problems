@@ -1,0 +1,29 @@
+Problem J
+Pyramids
+
+Problem ID: pyramids
+A pharaoh wants to build pyramids with a given number of stone cubes, following specific restrictions:
+1. All cubes must be used.
+2. You may build more than one pyramid, but you must build as few pyramids as possible.
+3. All pyramids must be different.
+4. Each pyramid must have a height of at least 2.
+5. Satisfying the above, the largest pyramid must be the largest possible in terms of cube count, and so on.
+
+Input
+
+The input consists of several test cases, each on a single line with an integer c, the number of available cubes (1 ≤ c ≤ 10^6).
+
+The last test case is followed by a line containing a single zero.
+
+Output
+
+For each test case, display its case number followed by the pyramids to be built. Pyramids are specified by the length of their base followed by ‘L’ for low pyramids or ‘H’ for high pyramids. Print “impossible” if no configuration meets the restrictions.
+
+Sample input:
+29
+28
+0
+
+Sample output:
+Case 1: 3H 3L 2H
+Case 2: impossible

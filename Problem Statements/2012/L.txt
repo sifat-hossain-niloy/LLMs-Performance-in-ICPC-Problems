@@ -1,0 +1,28 @@
+Problem L
+Takeover Wars
+
+Problem ID: takeover
+In a takeover war between two corporations, Takeover Incorporated and Buyout Limited, each controls a number of subsidiaries, each with a market value. Companies take turns attempting to take over the competition's subsidiaries. A takeover is successful if the attacking subsidiary has a greater market value. Takeover Incorporated starts first.
+
+Input
+
+Each test case has:
+1. Two integers, N and M, the number of subsidiaries of Takeover Incorporated and Buyout Limited, respectively.
+2. A line with N integers, the market values of Takeover's subsidiaries.
+3. A line with M integers, the market values of Buyout's subsidiaries.
+
+Output
+
+For each test case, display the case number and the winner, either "Takeover Incorporated" or "Buyout Limited," based on optimal play by both companies.
+
+Sample input:
+3 2
+7 1 1
+5 5
+4 2
+3 3 3 3
+5 5
+
+Sample output:
+Case 1: Takeover Incorporated
+Case 2: Buyout Limited

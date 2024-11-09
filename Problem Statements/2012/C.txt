@@ -1,0 +1,33 @@
+Problem C
+Bus Tour
+
+Problem ID: bustour
+A tourist bus route begins at headquarters, stops at various hotels, goes to an attraction, and then returns to each hotel, ending at headquarters. The route minimizes the tour length but ensures that hotels visited early on the way to the attraction are also visited early on the way back.
+
+Input
+
+Each test case has:
+1. Two integers n and m (3 ≤ n ≤ 20), where n is the number of locations (headquarters, hotels, attraction), and m is the number of roads.
+2. m lines each with u, v, and t (road time between u and v).
+
+Output
+
+Display the case number and the shortest possible tour time.
+
+Sample input:
+5 4
+0 1 10
+1 2 20
+2 3 30
+3 4 40
+4 6
+0 1 1
+0 2 1
+0 3 1
+1 2 1
+1 3 1
+2 3 1
+
+Sample output:
+Case 1: 300
+Case 2: 6

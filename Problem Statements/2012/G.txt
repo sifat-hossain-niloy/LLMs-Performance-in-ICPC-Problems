@@ -1,0 +1,39 @@
+Problem G
+Minimum Cost Flow
+
+Problem ID: minflow
+In an old factory, water needs to be transported between two points using old plumbing components with some open holes. Water will leak through these open holes unless plugged. The goal is to connect the source and destination while minimizing the cost of new pipes and plugs.
+
+Input
+
+The first line of each test case contains two integers, N (number of junctions) and M (number of usable pipes). Each of the next N lines describes a junction with four integers xi, yi, zi (coordinates) and ki (number of open holes). The next M lines describe the existing pipes.
+
+Output
+
+For each test case, display the case number. If it’s possible to connect the source to the destination without flooding, display the minimum cost of connection; otherwise, display "impossible."
+
+Sample input:
+7 6
+2 0 1 1
+0 0 0 2
+1 0 4 3
+3 0 4 3
+5 0 1 1
+3 0 2 0
+5 0 3 0
+1 2
+1 3
+3 4
+4 7
+5 7
+6 7
+4 1
+2 0 0 0
+3 0 1 0
+4 1 0 1
+5 1 1 1
+1 2
+
+Sample output:
+Case 1: 4.0000
+Case 2: impossible

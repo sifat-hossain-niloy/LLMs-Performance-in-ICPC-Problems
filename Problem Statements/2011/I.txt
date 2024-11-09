@@ -1,0 +1,29 @@
+Problem I
+Mummy Madness
+
+Problem ID: mummy
+While on an excursion, you encounter mummies in a desert grid. You start at the origin (0, 0), and mummies are placed on the grid at integer coordinates. You and the mummies alternate moves, with you moving first. You can move to any adjacent square or stand still, while each mummy moves to the square that brings it closest to you. Determine how long you can avoid capture.
+
+Input
+
+The input consists of several test cases. Each test case begins with an integer n (0 ≤ n ≤ 10^5), the number of mummies. The following n lines contain two integers x and y, representing the initial position of each mummy. Your starting position is (0, 0), and no mummy starts at this position.
+
+The last test case is followed by a line containing the number -1.
+
+Output
+
+For each test case, display its case number, followed by the maximum number of time steps until you are caught, or the word “never” if you can avoid capture indefinitely.
+
+Sample input:
+4
+-3 5
+3 4
+-6 -2
+1 -5
+1
+0 -1
+-1
+
+Sample output:
+Case 1: 4
+Case 2: never

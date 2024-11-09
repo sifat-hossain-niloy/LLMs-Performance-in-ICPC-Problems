@@ -1,0 +1,33 @@
+Problem K
+Trash Removal
+
+Problem ID: trash
+Allied Chute Manufacturers is a company that builds trash chutes. A trash chute is a hollow tube installed in buildings so that trash dropped in at the top will fall down and be collected in the basement. Designing trash chutes is highly nontrivial. Depending on what kind of trash people are expected to drop into them, the trash chute needs to have an appropriate size. Since the cost of manufacturing a trash chute is proportional to its size, the company always wants to build the chute as small as possible.
+
+For this problem, you’ll work with a simplified model of the chute design. A trash chute points straight down and has a constant width. Objects dropped into the chute are modeled as polygons, which can be rotated for optimal fit. Once dropped, the object will travel straight down without further rotation.
+
+Input
+
+The input contains several test cases. Each test case starts with an integer n, representing the number of points in the polygon that models the trash item (3 ≤ n ≤ 100). The next n lines each contain two integers xi and yi (0 ≤ xi, yi ≤ 10^4), representing the coordinates of the polygon vertices in order. All points in one test case are guaranteed to be mutually distinct, and the polygon sides will never intersect except at their endpoints.
+
+The last test case is followed by a line containing a single zero.
+
+Output
+
+For each test case, display its case number followed by the width of the smallest trash chute through which the object can pass. Display the width with exactly two digits after the decimal point, rounding up to the nearest multiple of 0.01. Answers within 0.01 of the correct rounded answer will be accepted.
+
+Sample input:
+3
+0 0
+3 0
+0 4
+4
+0 10
+10 0
+20 10
+10 20
+0
+
+Sample output:
+Case 1: 2.40
+Case 2: 14.15

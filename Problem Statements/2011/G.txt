@@ -1,0 +1,26 @@
+Problem G
+Magic Sticks
+
+Problem ID: magicsticks
+In this problem, you have a magic stick with several straight segments, which can be folded at joints to form polygons. Your task is to determine the maximum area of polygons that can be formed using each segment at most once.
+
+Input
+
+The input contains several test cases. Each test case starts with an integer n, which is the number of segments in the magic stick (1 ≤ n ≤ 500). The next line contains n integers S1, S2, ..., Sn, indicating the lengths of the segments.
+
+The last test case is followed by a line containing a single zero.
+
+Output
+
+For each test case, display its case number followed by the maximum total enclosed area that can be obtained by folding the stick. Answers within an absolute or relative error of 10^-4 will be accepted.
+
+Sample input:
+4
+1 2 3 4
+8
+3 4 5 33 3 4 3 5
+0
+
+Sample output:
+Case 1: 4.898979
+Case 2: 19.311

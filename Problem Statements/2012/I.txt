@@ -1,0 +1,33 @@
+Problem I
+A Safe Bet
+
+Problem ID: safe
+In a safe, a laser beam passes through a grid with mirrors. The beam opens the safe if it exits through a specific location. A missing mirror prevents this, but inserting the correct mirror can allow the safe to open. Your task is to determine if the safe can be opened or if it remains secure.
+
+Input
+
+Each test case starts with four integers r, c, m, and n (grid dimensions and mirror counts). The next m lines provide the positions of `/` mirrors, and the following n lines provide the positions of `\` mirrors.
+
+Output
+
+For each test case, display:
+- `0` if the safe opens without inserting a mirror.
+- `k r c` if exactly k positions allow the safe to open, with the smallest position listed.
+- "impossible" if the safe cannot be opened.
+
+Sample input:
+5 6 1 4
+2 3
+1 2
+2 5
+4 2
+5 5
+100 100 0 2
+1 77
+100 77
+100 100 0 0
+
+Sample output:
+Case 1: 2 4 3
+Case 2: 0
+Case 3: impossible

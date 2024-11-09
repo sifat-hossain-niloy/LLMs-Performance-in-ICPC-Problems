@@ -1,0 +1,45 @@
+Problem F
+Keys
+
+Problem ID: keys
+Adam has a set of keys attached to key rings, some of which are connected. Adam wants to give some keys to Brenda, minimizing the number of key detachments and attachments. After these operations, Adam and Brenda each need one connected group of rings and keys, with some rings allowed to remain disconnected.
+
+Input
+
+Each test case consists of several lines, each containing a two-letter string where lowercase letters represent key rings and uppercase letters represent keys. The end of each test case is marked by a line containing the digit '0'.
+
+Output
+
+For each test case, display the case number, the minimal number of key operations, and the minimal number of ring operations. If splitting the keys as requested is impossible, display the word "impossible."
+
+Sample input:
+ab
+bc
+aA
+aN
+Rb
+cB
+0
+aA
+bB
+Cc
+0
+aA
+aZ
+0
+aA
+bB
+cC
+xX
+yY
+ax
+xb
+by
+yc
+0
+
+Sample output:
+Case 1: 2 1
+Case 2: 0 2
+Case 3: impossible
+Case 4: 0 7

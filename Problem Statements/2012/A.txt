@@ -1,0 +1,30 @@
+Problem A
+Asteroid Rangers
+
+Problem ID: asteroids
+The year is 2112, and humankind has conquered the solar system. The Space Ranger Corps has set up bases on various asteroids. Your job is to ensure that all Space Ranger asteroid bases can communicate with one another as cost-effectively as possible. Setting up direct communication links between each pair of bases is expensive, so you want to set up the minimum number of links for full communication, minimizing relay system switches.
+
+Input
+
+Each test case starts with a line containing an integer n (2 ≤ n ≤ 50) for the number of asteroid bases. Each of the following n lines has six integers x, y, z, vx, vy, vz:
+- x, y, z are the initial coordinates of an asteroid (−150 ≤ x, y, z ≤ 150),
+- vx, vy, vz are the velocity components (−100 ≤ vx, vy, vz ≤ 100).
+
+Output
+
+For each test case, display a single line containing the case number and the number of times the relay system needs setup or modification.
+
+Sample input:
+3
+0 0 0 0 0 0
+5 0 0 0 0 0
+10 1 0 -1 0 0
+4
+0 0 0 1 0 0
+0 1 0 0 -1 0
+1 1 1 3 1 1
+-1 -1 2 1 -1 -1
+
+Sample output:
+Case 1: 3
+Case 2: 3

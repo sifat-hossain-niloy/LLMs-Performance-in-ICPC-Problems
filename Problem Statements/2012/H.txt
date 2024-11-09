@@ -1,0 +1,28 @@
+Problem H
+Room Service
+
+Problem ID: room
+In a convex polygonal room, a robot starts at a given point and needs to touch each wall of the room before returning to the starting point. Your task is to determine the shortest route that achieves this.
+
+Input
+
+Each test case starts with the number of vertices N of the polygon (3 ≤ N ≤ 100) and the coordinates of the robot's starting point. The next N lines provide the vertices of the polygon in counterclockwise order.
+
+Output
+
+For each test case, display the case number and the length of the shortest route to touch each wall and return to the start, accurate to two decimal places.
+
+Sample input:
+4 0 0
+-1 -1
+1 -1
+1 1
+-1 1
+3 10 1
+0 0
+30 0
+0 20
+
+Sample output:
+Case 1: 5.66
+Case 2: 36.73

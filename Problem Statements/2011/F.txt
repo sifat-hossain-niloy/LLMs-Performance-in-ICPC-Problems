@@ -1,0 +1,43 @@
+Problem F
+Machine Works
+
+Problem ID: works
+You are the director of Arbitrarily Complex Machines (ACM for short), a company producing advanced machinery using even more advanced machinery. The old production machinery has broken down, so you need to buy new production machines for the company. Your goal is to make as much money as possible during the restructuring period by buying, operating, and selling machines.
+
+During the restructuring period, there will be several machines for sale. You know the price Pi and availability day Di for each machine Mi. If you don’t buy Mi on day Di, someone else will buy it, and it won’t be available later. You cannot buy a machine if ACM has less money than the price of the machine.
+
+If you buy Mi on day Di, ACM can operate it starting on day Di + 1. Each day that the machine operates, it produces a profit of Gi dollars. You can also sell a machine to reclaim a part of its purchase price any day after you’ve bought it. Each machine has a resale price Ri. Selling prevents operating on the sale day, but proceeds from the sale can be used to buy a new machine the same day.
+
+Once the restructuring period ends, ACM will sell any machine it still owns. Your task is to maximize the company’s final cash amount after the restructuring period.
+
+Input
+
+The input consists of several test cases. Each test case starts with a line containing three integers: 
+- N is the number of machines for sale (N ≤ 10^5),
+- C is the initial cash amount for the company (C ≤ 10^9),
+- D is the number of days in the restructuring period (D ≤ 10^9).
+
+Each of the next N lines describes a single machine for sale with four integers: Di, Pi, Ri, and Gi, where:
+- Di is the day of sale availability,
+- Pi is the purchase price,
+- Ri is the resale price,
+- Gi is the daily profit.
+
+The last test case is followed by a line containing three zeros.
+
+Output
+
+For each test case, display its case number followed by the maximum amount of money ACM can have at the end of day D + 1.
+
+Sample input:
+6 10 20
+6 12 1 3
+1 9 1 2
+3 2 1 2
+8 20 5 4
+4 11 7 4
+2 10 9 1
+0 0 0
+
+Sample output:
+Case 1: 44

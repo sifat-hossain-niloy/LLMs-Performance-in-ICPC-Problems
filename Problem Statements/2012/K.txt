@@ -1,0 +1,30 @@
+Problem K
+Stacking Plates
+
+Problem ID: stacking
+The Plate Shipping Company, an internet retailer specializing in plates, needs to pack plates into a single stack efficiently. Each manufacturer’s plates arrive as a single stack ordered by size. To combine these into one stack, you may perform two operations:
+- Split: Separate a portion from the top of a stack to create a new stack.
+- Join: Place one stack on top of another if the resulting stack remains ordered by size.
+
+Input
+
+Each test case begins with an integer n (1 ≤ n ≤ 50), the number of stacks. Each of the next n lines describes a stack with:
+- h, the number of plates in the stack, followed by
+- h integers representing the diameters of the plates from top to bottom.
+
+Output
+
+For each test case, display the case number and the minimum number of operations (splits and joins) required to form a single ordered stack.
+
+Sample input:
+2
+3 1 2 4
+2 3 5
+3
+4 1 1 1 1
+4 1 1 1 1
+4 1 1 1 1
+
+Sample output:
+Case 1: 5
+Case 2: 2
