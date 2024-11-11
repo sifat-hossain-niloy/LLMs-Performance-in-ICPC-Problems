@@ -1,0 +1,32 @@
+Problem F
+Low Power
+
+Time Limit: 4 seconds
+
+You are building advanced chips for machines. Making the chips is easy, but the power supply turns out to be an issue since the available batteries have varied power outputs.
+
+Consider the problem of n machines, each with two chips, where each chip is powered by k batteries. Surprisingly, it does not matter how much power each chip gets, but a machine works best when its two chips have power outputs as close as possible. The power output of a chip is simply the smallest power output of its k batteries.
+
+You have a stockpile of 2nk batteries that you want to assign to the chips. It might not be possible to allocate the batteries so that in every machine both chips have equal power outputs, but you want to allocate them so that the differences are as small as possible. To be precise, you want to tell your customers that in all machines the difference of power outputs of the two chips is at most d, and you want to make d as small as possible. To do this you must determine an optimal allocation of the batteries to the machines.
+
+Input
+
+The input consists of a single test case. A test case consists of two lines. The first line contains two positive integers: the number of machines n and the number of batteries per chip k (2nk ≤ 10^6). The second line contains 2nk integers pi specifying the power outputs of the batteries (1 ≤ pi ≤ 10^9).
+
+Output
+
+Display the smallest number d such that you can allocate the batteries so that the difference of power outputs of the two chips in each machine is at most d.
+
+Sample Input 1:
+2 3  
+1 2 3 4 5 6 7 8 9 10 11 12  
+
+Sample Output 1:
+1  
+
+Sample Input 2:
+2 2  
+3 1 3 3 3 3 3 3  
+
+Sample Output 2:
+2  

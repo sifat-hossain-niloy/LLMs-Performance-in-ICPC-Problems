@@ -1,0 +1,19 @@
+Problem J
+Tunnels
+
+Time Limit: 2 seconds
+
+The Icelandic government has decided to build tunnels between different cities on the island. The cities
+are represented as points on a 2D plane and the objective is to minimize the total length of tunnels built.
+Unfortunately, the bedrock between some of the cities is fragile and does not allow for tunnels to be built
+between them, which complicates the task.
+
+Given a list of cities and the fragile connections, find the minimum total length of tunnels that can be
+built to connect all cities, or determine that it is impossible to connect all cities.
+
+Input
+
+The input consists of a single test case. The first line contains two integers n and m, where n (1 ≤ n ≤
+1 000) is the number of cities and m (0 ≤ m ≤ n(n − 1)/2) is the number of fragile connections. Cities
+are numbered from 1 to n. The next n lines each contain two integers xi and yi (−10 000 ≤ xi, yi ≤
+10 000), giving the coordinates

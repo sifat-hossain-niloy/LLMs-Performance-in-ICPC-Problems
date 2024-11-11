@@ -1,0 +1,49 @@
+Problem I
+Skewed Sorting
+
+Time Limit: 1 second
+
+As an intern at a popular video sharing website, you are responsible for sorting lists of videos in a
+“somewhat ascending” order. Your boss has decided that the following “skewed sorting” technique is
+most effective at attracting viewers:
+
+1. Divide the list into two parts: the first k and the last k elements.
+2. Sort each part in increasing order.
+3. Concatenate the sorted parts in the order they appear in the list. If k is greater than or equal to
+   half the size of the list, simply sort the entire list in increasing order.
+
+The skewed sorting technique is unusual and can generate excitement among viewers. But the site’s
+scalability requires that it be as efficient as possible. Write a program to sort the list of videos using this
+technique.
+
+Input
+
+The input consists of a single test case. The first line contains two integers n and k (1 ≤ n ≤ 100 000,
+0 ≤ k < n), where n is the number of elements in the list and k is the number of elements in each of the
+two parts. The second line contains n distinct integers a1, . . . , an (1 ≤ ai ≤ 10^9), representing the
+list of video IDs.
+
+Output
+
+Display the list of video IDs in “somewhat ascending” order as described above.
+
+Sample Input 1
+5 1
+4 2 5 1 3
+
+Sample Output 1
+2 4 5 1 3
+
+Sample Input 2
+7 2
+7 4 1 6 3 5 2
+
+Sample Output 2
+1 4 6 2 3 5 7
+
+Sample Input 3
+5 2
+4 2 5 1 3
+
+Sample Output 3
+1 2 3 4 5

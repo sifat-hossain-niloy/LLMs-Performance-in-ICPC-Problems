@@ -1,0 +1,40 @@
+Problem I
+Pirate Chest
+
+Time Limit: 15 seconds
+
+Pirate Dick finally had enough of fighting, marauding, theft, and making life miserable for many on the open seas. So he decided to retire, and he found the perfect island to spend the rest of his days on, provided he does not run out of money. He has plenty of gold coins now, and he wants to store them in a chest. Dick can construct a rectangular chest with integer dimensions of any size up to a specified maximum size for the top but with an arbitrary integer height. Now he needs a place to hide the chest.
+
+Dick will hide his chest by submerging it in a murky pond. The pond has a rectangular surface, and it completely fills the bottom of a valley that has high vertical rocky walls. When Dick submerges the chest, it will sink as far as possible until it touches the bottom. The top of the chest will remain parallel to the pond’s surface and the chest will be aligned with the grid squares. The water displaced by the submerged chest will raise the level of the pond’s surface. The walls of the valley are high enough that the water can never splash out of the valley. Since the chest must be invisible, its top must be strictly below the surface of the pond. Your job is to find the volume of the largest chest that Pirate Dick can hide this way.
+
+Input
+
+The input consists of a single test case. A test case starts with a line containing four integers a, b, m, and n (1 ≤ a, b, m, n ≤ 500). The pond’s surface dimensions are m × n and the maximum size of the top (and bottom) of the chest is a × b. Each of the remaining m lines in a test case contains n integers di,j specifying the pond’s depth at grid square (i, j), where 0 ≤ di,j ≤ 10^9 for each 1 ≤ i ≤ m and 1 ≤ j ≤ n.
+
+Output
+
+Display the maximum volume of a rectangular chest with integer dimensions (where one of the dimensions of the top is bounded by a and the other is bounded by b) that can be completely submerged below the surface of the pond. If no chest can be hidden in the pond, display 0.
+
+Sample Input 1:
+3 1 2 3  
+2 1 1  
+2 2 1  
+
+Sample Output 1:
+4  
+
+Sample Input 2:
+4 1 1 5  
+2 0 2 2 2  
+
+Sample Output 2:
+12  
+
+Sample Input 3:
+2 3 3 5  
+2 2 2 2 2  
+2 2 2 2 2  
+2 2 2 2 2  
+
+Sample Output 3:
+18  
