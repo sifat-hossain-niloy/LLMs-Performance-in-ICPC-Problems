@@ -1,0 +1,60 @@
+Problem name: Balanced Diet
+Time limit: 2 seconds
+
+Every day, Danny buys one sweet from the candy store and eats it. The store has m types of sweets,
+numbered from 1 to m. Danny knows that a balanced diet is important and is applying this concept to
+his sweet purchasing. To each sweet type i, he has assigned a target fraction, which is a real number fi
+(0 < fi ≤ 1). He wants the fraction of sweets of type i among all sweets he has eaten to be roughly
+equal to fi. To be more precise, let si denote the number of sweets of type i that Danny has eaten, and
+let n =
+
+∑m
+i=1 si. We say the set of sweets is balanced if for every i we have
+
+nfi − 1 < si < nfi + 1.
+
+Danny has been buying and eating sweets for a while and during this entire time the set of sweets
+has been balanced. He is now wondering how many more sweets he can buy while still fulfilling this
+condition. Given the target fractions fi and the sequence of sweets he has eaten so far, determine how
+many more sweets he can buy and eat so that at any time the set of sweets is balanced.
+
+Input
+
+The input consists of three lines. The first line contains two integers m (1 ≤ m ≤ 105), which is the
+number of types of sweets, and k (0 ≤ k ≤ 105), which is the number of sweets Danny has already
+eaten.
+
+The second line containsm positive integers a1, . . . , am. These numbers are proportional to f1, . . . , fm,
+that is, fi =
+
+ai∑m
+j=1 aj
+
+. It is guaranteed that the sum of all aj is no larger than 105.
+
+The third line contains k integers b1, . . . , bk (1 ≤ bi ≤ m), where each bi denotes the type of sweet
+Danny bought and ate on the ith day. It is guaranteed that every prefix of this sequence (including the
+whole sequence) is balanced.
+
+Output
+
+Display the maximum number of additional sweets that Danny can buy and eat while keeping his diet
+continuously balanced. If there is no upper limit on the number of sweets, display the word forever.
+
+Sample Input 1 
+
+6 5
+2 1 6 3 5 3
+1 2 5 3 5
+Sample Output 1
+1
+
+Sample Input 2 
+
+6 4
+2 1 6 3 5 3
+1 2 5 3
+Sample Output 2
+forever
+
+Think carefully and solve this problem in C++.

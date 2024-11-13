@@ -1,60 +1,40 @@
-Problem name: Balanced Diet
-Time limit: 2 seconds
+Problem A
+Amalgamated Artichokes
 
-Every day, Danny buys one sweet from the candy store and eats it. The store has m types of sweets,
-numbered from 1 to m. Danny knows that a balanced diet is important and is applying this concept to
-his sweet purchasing. To each sweet type i, he has assigned a target fraction, which is a real number fi
-(0 < fi ≤ 1). He wants the fraction of sweets of type i among all sweets he has eaten to be roughly
-equal to fi. To be more precise, let si denote the number of sweets of type i that Danny has eaten, and
-let n =
+Time limit: 5 seconds
 
-∑m
-i=1 si. We say the set of sweets is balanced if for every i we have
+Fatima Cynara is an analyst at Amalgamated Artichokes (AA). As with any company, AA has had some very good times as well as some bad ones. Fatima does trending analysis of the stock prices for AA, and she wants to determine the largest decline in stock prices over various time spans. For example, if over a span of time the stock prices were 19, 12, 13, 11, 20, and 14, then the largest decline would be 8 between the first and fourth price. If the last price had been 10 instead of 14, then the largest decline would have been 10 between the last two prices.
 
-nfi − 1 < si < nfi + 1.
+Fatima has done some previous analyses and has found that the stock price over any period of time can be modelled reasonably accurately with the following equation:
 
-Danny has been buying and eating sweets for a while and during this entire time the set of sweets
-has been balanced. He is now wondering how many more sweets he can buy while still fulfilling this
-condition. Given the target fractions fi and the sequence of sweets he has eaten so far, determine how
-many more sweets he can buy and eat so that at any time the set of sweets is balanced.
+price(k) = p · (sin(a · k + b) + cos(c · k + d) + 2)
+
+where p, a, b, c, and d are constants. Fatima would like you to write a program to determine the largest price decline over a given sequence of prices. Figure A.1 illustrates the price function for Sample Input 1. You have to consider the prices only for integer values of k.
 
 Input
 
-The input consists of three lines. The first line contains two integers m (1 ≤ m ≤ 105), which is the
-number of types of sweets, and k (0 ≤ k ≤ 105), which is the number of sweets Danny has already
-eaten.
-
-The second line containsm positive integers a1, . . . , am. These numbers are proportional to f1, . . . , fm,
-that is, fi =
-
-ai∑m
-j=1 aj
-
-. It is guaranteed that the sum of all aj is no larger than 105.
-
-The third line contains k integers b1, . . . , bk (1 ≤ bi ≤ m), where each bi denotes the type of sweet
-Danny bought and ate on the ith day. It is guaranteed that every prefix of this sequence (including the
-whole sequence) is balanced.
+The input consists of a single line containing 6 integers p (1 ≤ p ≤ 1 000), a, b, c, d (0 ≤ a, b, c, d ≤ 1 000) and n (1 ≤ n ≤ 106). The first 5 integers are described above. The sequence of stock prices to consider is price(1), price(2), ..., price(n).
 
 Output
 
-Display the maximum number of additional sweets that Danny can buy and eat while keeping his diet
-continuously balanced. If there is no upper limit on the number of sweets, display the word forever.
+Display the maximum decline in the stock prices. If there is no decline, display the number 0. Your output should have an absolute or relative error of at most 10^-6.
 
-Sample Input 1 
+Sample Input 1
+42 1 23 4 8 10
 
-6 5
-2 1 6 3 5 3
-1 2 5 3 5
 Sample Output 1
-1
+104.855110477
 
-Sample Input 2 
+Sample Input 2
+100 7 615 998 801 3
 
-6 4
-2 1 6 3 5 3
-1 2 5 3
 Sample Output 2
-forever
+0.00
 
-Think carefully and solve this problem in C++.
+Sample Input 3
+100 432 406 867 60 1000
+
+Sample Output 3
+399.303813
+
+Think carefully and solve this problem in C++

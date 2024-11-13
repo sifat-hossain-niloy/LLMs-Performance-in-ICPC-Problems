@@ -1,72 +1,55 @@
-Problem name: Polygonal Puzzle
-Time limit: 20 seconds
+Problem H
+Qanat
 
-During last year’s ACM ICPC World Finals in Marrakesh, one of the judges bought a pretty wooden
-puzzle depicting a camel and palm trees. Unlike traditional jigsaw puzzles, which are usually created by
-cutting up an existing rectangular picture, all the pieces of this puzzle have been cut and painted separately.
-As a result, adjacent pieces often do not share common picture elements or colors. Moreover, the resulting
-picture itself is irregularly shaped. Given these properties, the shape of individual pieces is often the only
-possible way to tell where each piece should be placed.
+Time limit: 2 seconds
 
-The judge has been wondering ever since last year whether it is possible to write a program to solve this
-puzzle. An important part of such a program is a method to evaluate how well two puzzle pieces “match”
-each other. The better the match, the more likely it is that those pieces are adjacent in the puzzle.
+A qanat is an irrigation system widely used to deliver water in hot, arid climates. The technology was originally developed by Persians over 2000 years ago. In Morocco, qanats are known as khettara and are still used today in the southern part of the country.
 
-Pieces are modeled as simple polygons. Your task is to find a placement of two given polygons such that
-their interiors do not overlap but the polygons touch with their boundaries and the length of the common
-boundary is maximized. For this placement, polygons can be translated and rotated, but not reflected or
-resized.
+The basic feature of a qanat is an essentially horizontal channel that brings water from an underground water source to an outlet near a civilization. There is also a shaft known as a mother well that rises vertically from the underground water source to the surface of a mountain or hill. Creating such a system is extremely expensive, and was especially so in ancient times, since all of the materials excavated from the channel and mother well must be carried above ground, either through the channel outlet or the top of the mother well. To aid in the construction, there are often one or more additional vertical shafts placed at strategic locations above the underground channel. Although these shafts must also be excavated, they provide a means for lifting additional dirt from the horizontal channel as illustrated in Figure H.1.
+
+For this problem, model the cross-section of a qanat as shown in Figure H.2, with the channel outlet at (0, 0), the water source at (w, 0), and the top of the mother well at (w, h) with w > h. The surface of the mountain extends along a straight line from (w, h) to (0, 0).
+
+Every qanat must have a vertical mother well from the water source to the mountain surface above, along with n additional vertical shafts. The channel and all shafts are modeled as line segments. Your goal is to determine the placement for those additional shafts so as to minimize the overall excavation cost. This cost is equal to the sum of the distances that each piece of excavated dirt must be transported to reach the surface (using any combination of horizontal and vertical movement). For example, the cost of excavating a continuous section of dirt starting from the surface and going along a path of length ` (possibly including turns) is
+
+∫ 0 x dx = 1/2`^2.
 
 Input
 
-The input contains the description of two polygons, one after the other. Each polygon description starts
-with a line containing an integer n (3 ≤ n ≤ 50) denoting the number of vertices of the polygon. This
-is followed by n lines, each containing two integer coordinates x, y of a polygon vertex (|x|, |y| ≤ 100).
-The vertices of each polygon are given in clockwise order, and no three consecutive vertices are collinear.
-
-The input data is chosen so that even if the vertices were moved by a distance of up to 10^-7, the answer
-would not increase by more than 10^-4.
+The input consists of a single line containing three integers w (1 ≤ w ≤ 10 000), h (1 ≤ h < w), and n (1 ≤ n ≤ 1 000). The value w is the horizontal distance from the water source to the qanat outlet. The value h is the vertical distance from the water source to the mountain surface. The value n is the number of vertical shafts that must be used in addition to the mother well.
 
 Output
 
-Display the maximum possible length of the common boundary of these polygons when they are optimally
-placed. Your answer should have an absolute or relative error of less than 10^-3.
+First, display the minimum overall excavation cost. Next, display the x-coordinates, in increasing order, for n optimally placed vertical shafts. If n > 10, display only the first 10 x-coordinates. Answers within an absolute or relative error of 10^-4 will be accepted. You may assume that there is a unique solution. No test case will result in a shaft within 0.001 units from the outlet of the qanat channel or from another shaft.
 
-Sample Input 1 
+Sample Input 1
+8 4 1
 
-8
-0 0
-0 10
-10 10
-15 15
-24 6
-24 10
-30 10
-30 0
-7
--5 0
--5 10
-10 10
-15 5
-20 10
-35 10
-35 0
 Sample Output 1
-30.142135624
+31.500000
+3.000000
 
-Sample Input 2 
+Sample Input 2
+195 65 2
 
-3
-1 0
-0 30
-40 0
-3
-1 0
-0 30
-40 0
 Sample Output 2
-50
+12220.000000
+48.000000
+108.000000
 
+Sample Input 3
+10000 1 1000
 
+Sample Output 3
+30141.885677
+9.956721
+19.913443
+29.870164
+39.826887
+49.783610
+59.740334
+69.697060
+79.653786
+89.610515
+99.567245
 
-Think carefully and solve this problem in C++
+Think carefully and solve this problem in C++.

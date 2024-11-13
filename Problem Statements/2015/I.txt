@@ -1,68 +1,40 @@
-Problem name: Road Times
-Time limit: 5 seconds
+Problem I
+Ship Traffic
 
-Ubol Narongdid is the founder of a brash new startup company called Special D-Liver-E. She wants to
-corner the market on overnight deliveries of organs between hospitals in the Phuket area. For scheduling
-purposes, it is important to have accurate estimates for the times to perform such deliveries. Several
-trips between various hospitals have already been performed, so delivery times between those pairs of
-hospitals are known. The company currently has software to estimate times for other (as yet untraveled)
-trips, but so far all the estimates have been woefully inaccurate.
+Time limit: 3 seconds
 
-You have been asked to come up with a method to improve these estimates. You have at your disposal
-the following information: 1) the length (in kilometers) of the roads connecting each pair of cities in the
-Phuket area, and 2) a set of times (in minutes) for various previously executed deliveries.
+Ferries crossing the Strait of Gibraltar from Morocco to Spain must carefully navigate to avoid the heavy ship traffic along the strait. Write a program to help ferry captains find the largest gaps in strait traffic for a safe crossing.
 
-You know that roads are one-way, and each road has a fixed speed limit that lies between 30 and 60
-kilometers per hour. Speed limits are real-valued and need not be integers. You also know that delivery
-trucks always take the route that minimizes distance traveled, and on each road will always travel at a
-constant speed equal to that road’s speed limit. Thus you know, for example, that if a given trip is 50
-kilometers, the time it will take is between 50 and 100 minutes inclusive, in the absence of any other
-information. Ah, but you do have other information, namely the times of previous deliveries. It is up to
-you to use it to produce the best possible estimates.
+Your program will use a simple model as follows. The strait has several parallel shipping lanes in the east-west direction. Ships run with the same constant speed either eastbound or westbound. All ships in the same lane run in the same direction. Satellite data provides the positions of the ships in each lane. The ships may have different lengths. Ships do not change lanes and do not change speed for the crossing ferry.
+
+The ferry waits for an appropriate time when there is an adequate gap in the ship traffic. It then crosses the strait heading northbound along a north-south line at a constant speed. From the moment a ferry enters a lane until the moment it leaves the lane, no ship in that lane may touch the crossing line. Ferries are so small you can neglect their size.
 
 Input
 
-The input starts with a line containing an integer n (1 ≤ n ≤ 30) indicating the number of cities,
-numbered 0 to n − 1. After that are n lines each containing n integers specifying the distance in
-kilometers between cities: the jth value on the ith line indicates the distance when traveling directly
-from city i to city j. A value of −1 indicates there is no road directly connecting the two cities, and the
-distance from any city to itself is always 0; all other distances are positive and at most 1 000. There are
-at most 100 roads.
+The first line of input contains six integers: the number of lanes n (1 ≤ n ≤ 10^5), the width w of each lane (1 ≤ w ≤ 1 000), the speed u of ships, and the speed v of the ferry (1 ≤ u, v ≤ 100), the ferry’s earliest start time t1 and the ferry’s latest start time t2 (0 ≤ t1 < t2 ≤ 10^6). All lengths are given in meters, all speeds are given in meters/second, and all times are given in seconds.
 
-Following this is a line with a single integer r (1 ≤ r ≤ 100) indicating the number of previously
-executed routes. The next r lines each contain three integers s, d, and t, where s and d are the source
-and destination cities and t is how long the delivery from s to d took, in minutes.
+Each of the next n lines contains the data for one lane. Each line starts with either E or W, where E indicates that ships in this lane are eastbound and W indicates that ships in this lane are westbound. Next in the line is an integer mi, the number of ships in this lane (0 ≤ mi ≤ 10^5 for each 1 ≤ i ≤ n). It is followed by mi pairs of integers lij and pij (1 ≤ lij ≤ 1 000 and −10^6 ≤ pij ≤ 10^6). The length of ship j in lane i is lij, and pij is the position at time 0 of its forward end, that is, its front in the direction it moves.
 
-Finally, there is a line containing a single integer q (1 ≤ q ≤ 100) indicating the number of future
-delivery queries. The next q lines each contain two integers s and d giving the source and destination
-cities for the query.
-
-You may assume that for each of the r+q source/destination pairs in the input there is a unique minimum-
-distance route.
+Ship positions within each lane are relative to the ferry’s crossing line. Negative positions are west of the crossing line, and positive positions are east of it. Ships do not overlap or touch, and are sorted in increasing order of their positions. Lanes are ordered by increasing distance from the ferry’s starting point, which is just south of the first lane. There is no space between lanes. The total number of ships is at least 1 and at most 10^5.
 
 Output
 
-Display a single line for each query containing the source and destination cities for that query, followed
-by the best low and high bounds on the estimate for the travel time, accurate to within an absolute or
-relative error of 10^-6.
+Display the maximal value d for which there is a time s such that the ferry can start a crossing at any time t with s ≤ t ≤ s + d. Additionally, the crossing must not start before time t1 and must start no later than time t2. The output must have an absolute or relative error of at most 10^-3. You may assume that there is a time interval with d > 0.1 seconds for the ferry to cross.
 
-Sample Input 1 
+Sample Input 1
+3 100 5 10 0 100
+E 2 100 -300 50 -100
+W 3 10 60 50 200 200 400
+E 1 100 -300
 
-3
-0 50 -1
-55 0 40
--1 40 0
-1
-0 2 120
-3
-0 1
-1 2
-1 0
 Sample Output 1
-0 1 50.0 80.0
-1 2 40.0 70.0
-1 0 55.0 110.0
+6.00000000
 
+Sample Input 2
+1 100 5 10 0 200
+W 4 100 100 100 300 100 700 100 900
 
+Sample Output 2
+50.00000000
 
-Think carefully and solve this problem in C++
+Think carefully and solve this problem in C++.

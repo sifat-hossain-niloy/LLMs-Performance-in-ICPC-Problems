@@ -1,54 +1,35 @@
-Problem name: Oil
-Time limit: 10 seconds
+Problem G
+Pipe Stream
 
-A large part of the world economy depends on oil, which is why research into new methods for finding
-and extracting oil is still active. Profits of oil companies depend in part on how efficiently they can
-drill for oil. The International Crude Petroleum Consortium (ICPC) hopes that extensive computer
-simulations will make it easier to determine how to drill oil wells in the best possible way.
+Time limit: 2 seconds
 
-Drilling oil wells optimally is getting harder each day – the newly discovered oil deposits often do
-not form a single body, but are split into many parts. The ICPC is currently concerned with stratified
-deposits, as illustrated in Figure G.1.
+Your hometown has hired some contractors – including you! – to manage its municipal pipe network. They built the network, at great expense, to supply Flubber to every home in town. Unfortunately, nobody has found a use for Flubber yet, but never mind. It was a Flubber network or a fire department, and honestly, houses burn down so rarely, a fire department hardly seems necessary.
 
-To simplify its analysis, the ICPC considers only the 2-dimensional case, where oil deposits are modeled
-as horizontal line segments parallel to the earth’s surface. The ICPC wants to know how to place a single
-oil well to extract the maximum amount of oil. The oil well is drilled from the surface along a straight
-line and can extract oil from all deposits that it intersects on its way down, even if the intersection is at
-an endpoint of a deposit. One such well is shown as a dashed line in Figure G.1, hitting three deposits.
-In this simple model the amount of oil contained in a deposit is equal to the width of the deposit. Can
-you help the ICPC determine the maximum amount of oil that can be extracted by a single well?
+In the possible event that somebody somewhere decides they want some Flubber, they would like to know how quickly it will flow through the pipes. Measuring its rate of flow is your job.
+
+You have access to one of the pipes connected to the network. The pipe is l meters long, and you can start the flow of Flubber through this pipe at a time of your choosing. You know that it flows with a constant real-valued speed, which is at least v1 meters/second and at most v2 meters/second. You want to estimate this speed with an absolute error of at most t/2 meters/second.
+
+Unfortunately, the pipe is opaque, so the only thing you can do is to knock on the pipe at any point along its length, that is, in the closed real-valued range [0, l]. Listening to the sound of the knock will tell you whether or not the Flubber has reached that point. You are not infinitely fast. Your first knock must be at least s seconds after starting the flow, and there must be at least s seconds between knocks.
+
+Determine a strategy that will require the fewest knocks, in the worst case, to estimate how fast the Flubber is flowing. Note that in some cases the desired estimation might be impossible (for example, if the Flubber reaches the end of the pipe too quickly).
 
 Input
 
-The first line of input contains a single integer n (1 ≤ n ≤ 2000), which is the number of oil deposits.
-This is followed by n lines, each describing a single deposit. These lines contain three integers x0,
-x1, and y giving the deposit’s position as the line segment with endpoints (x0, y) and (x1, y). These
-numbers satisfy |x0|, |x1| ≤ 10^6 and 1 ≤ y ≤ 10^6. No two deposits will intersect, not even at a point.
+The input consists of multiple test cases. The first line of input contains an integer c (1 ≤ c ≤ 100), the number of test cases. Each of the next c lines describes one test case. Each test case contains the five integers l, v1, v2, t, and s (1 ≤ l, v1, v2, t, s ≤ 10^9 and v1 < v2), which are described above.
 
 Output
 
-Display the maximum amount of oil that can be extracted by a single oil well.
+For each test case, display the minimal number of knocks required to estimate the flow speed in the worst case. If it might be impossible to measure the flow speed accurately enough, display impossible instead.
 
-Sample Input 1 
-
-5
-100 180 20
-30 60 30
-70 110 40
-10 40 50
-0 80 70
-Sample Output 1
-200
-
-Sample Input 2 
-
+Sample Input 1
 3
-50 60 10
--42 -42 20
-25 0 10
-Sample Output 2
-25
+1000 1 30 1 1
+60 2 10 2 5
+59 2 10 2 5
 
+Sample Output 1
+5
+3
+impossible
 
-
-Think carefully and solve this problem in C++
+Think carefully and solve this problem in C++.
