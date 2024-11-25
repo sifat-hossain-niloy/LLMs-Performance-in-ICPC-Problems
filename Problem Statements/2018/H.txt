@@ -1,0 +1,42 @@
+Problem H. Single Cut of Failure
+Input file: standard input
+
+Output file: standard output
+
+Time limit: 6 seconds
+Memory limit: 512 megabytes
+
+The Intrusion and Crime Prevention Company (ICPC) builds intrusion detection systems for homes and businesses. ICPC proposes to install sensors on the four sides of a door, where pairs of sensors are connected by wires. If somebody opens the door, any connected sensor pair will detect this and cause an alarm to sound.
+
+The system has one design flaw, however. An intruder might cut the wires before opening the door. To assess the security of the system, you need to determine the minimum number of line segments that cut all wires.
+
+Input:
+The input starts with a line containing three integers n, w, and h, which represent the number of wires installed (1 ≤ n ≤ 10⁶) and the dimensions of the door (1 ≤ w, h ≤ 10⁸). This is followed by n lines, each describing a wire placement. Each of these lines contains four integers x₁, y₁, x₂, and y₂ (0 ≤ x₁, x₂ ≤ w, 0 ≤ y₁, y₂ ≤ h), meaning that a wire goes from (x₁, y₁) to (x₂, y₂). Each wire connects different sides of the door. No wire is anchored to any of the four corners of the door. All locations in the input are distinct.
+
+Output:
+Display a minimum-size set of straight line cuts that intersect all wires. First, display the number of cuts needed. Then display the cuts, one per line in the format x₁ y₁ x₂ y₂ for the cut between (x₁, y₁) and (x₂, y₂). Cuts may be displayed in any order. The start and end locations of each cut may be displayed in either order. If there are multiple sets of cuts with the same minimum size, display any of them.
+
+Examples:
+Input:
+4 4 6
+0 1 4 4
+0 5 2 0
+0 3 3 6
+2 6 4 2
+
+Output:
+1
+0 4 4 3
+
+Input:
+5 4 6
+0 2 2 0
+0 3 2 6
+1 6 3 0
+1 0 4 4
+3 6 4 2
+
+Output:
+2
+0 4 4 4.5
+0 1 4 1

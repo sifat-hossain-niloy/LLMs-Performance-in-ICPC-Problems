@@ -1,0 +1,28 @@
+Problem G
+Mosaic Browsing
+Time limit: 6 seconds
+
+The International Center for the Preservation of Ceramics (ICPC) is searching for motifs in ancient mosaics. A motif is similar to a mosaic but may have empty squares. The task is to find all occurrences of the motif in a given mosaic.
+
+Input
+
+The first line contains integers rp and cp, the dimensions of the motif. Then follow rp lines of integers in [0, 100], where 0 denotes an empty square. The next line contains integers rq and cq, the dimensions of the mosaic, followed by rq lines of integers in [1, 100].
+
+Output
+
+Output k, the number of matches, followed by k lines with the row and column of the top-left tile of each match, sorted by increasing row and column.
+
+Sample Input 1
+2 2
+1 0
+0 1
+3 4
+1 2 1 2
+2 1 1 1
+2 2 1 3
+
+Sample Output 1
+3
+1 1
+1 3
+2 2

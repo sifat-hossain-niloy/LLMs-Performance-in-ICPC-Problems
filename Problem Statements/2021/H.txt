@@ -1,0 +1,50 @@
+Problem H
+Prehistoric Programs
+Time limit: 6 seconds
+
+Archaeologists have discovered clay tablets with symbols that describe nested structures resembling opening and closing parentheses. Taken together, these tablets form a program or script. Your task is to arrange them in a sequence so that the resulting work has a properly nested parenthesis structure.
+
+A properly nested structure is either:
+- (), or
+- (A), where A is a properly nested structure, or
+- AB, where A and B are properly nested structures.
+
+Input
+
+The first line of input contains an integer n (1 ≤ n ≤ 106), the number of tablets. Each of the remaining n lines describes a tablet, containing a non-empty string of opening and closing parentheses. The strings are numbered from 1 to n in the order they appear. The input contains at most 107 parentheses.
+
+Output
+
+Output a permutation of the numbers from 1 to n such that concatenating the strings in this order results in a properly nested structure. If no such permutation exists, output "impossible."
+
+Sample Input 1
+2
+())())()
+((()
+
+Sample Output 1
+2
+1
+
+Sample Input 2
+5
+(
+))
+((
+))
+(
+
+Sample Output 2
+1
+5
+3
+2
+4
+
+Sample Input 3
+2
+((
+)
+
+Sample Output 3
+impossible

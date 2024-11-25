@@ -1,0 +1,37 @@
+Problem K
+Take On Meme
+Time limit: 4 seconds
+
+Your ad agency uses a tournament to find the ultimate viral meme. Each round involves voting among k memes to create a new meme. The process continues until one meme remains, calculated based on the votes. Determine the largest possible quality for the final meme.
+
+Input
+
+The first line contains an integer n (1 ≤ n ≤ 104), the number of nodes in the tournament tree. Each of the next n lines describes a node. A node with k children lists k integers representing the children. A leaf node specifies two integers x and y, representing the meme's coordinates.
+
+Output
+
+Output the largest possible quality for the champion meme at node 1.
+
+Sample Input 1
+4
+3 2 3 4
+0 10 1
+0 3 6
+0 2 7
+
+Sample Output 1
+169
+
+Sample Input 2
+8
+3 4 2 5
+2 3 8
+0 -3 9
+0 -5 -7
+2 6 7
+0 1 4
+0 -3 -1
+0 1 4
+
+Sample Output 2
+314

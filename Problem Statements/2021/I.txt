@@ -1,0 +1,43 @@
+Problem I
+Spider Walk
+Time limit: 6 seconds
+
+Charlotte the spider sits at the center of her web, which consists of silken strands and bridges connecting adjacent strands. Charlotte walks on autopilot, crossing every bridge she encounters. Given the current web configuration, calculate the minimum number of bridges Charlotte needs to add to ensure she ends at her favorite strand from every possible starting strand.
+
+Input
+
+The first line has three integers n, m, and s, where n (3 ≤ n ≤ 200,000) is the number of strands, m (0 ≤ m ≤ 500,000) is the number of bridges, and s (1 ≤ s ≤ n) is Charlotte's favorite strand. Each of the next m lines describes a bridge with two integers d and t, where d (1 ≤ d ≤ 109) is the bridge's distance from the center, and t is the strand it starts on.
+
+Output
+
+Output n lines, where the ith line contains the minimum number of bridges Charlotte needs to add to end at strand s when starting from strand i.
+
+Sample Input 1
+7 5 6
+2 1
+4 3
+6 3
+8 7
+10 5
+
+Sample Output 1
+2
+1
+1
+1
+0
+1
+2
+
+Sample Input 2
+4 4 2
+1 1
+2 2
+3 3
+4 4
+
+Sample Output 2
+1
+1
+0
+1

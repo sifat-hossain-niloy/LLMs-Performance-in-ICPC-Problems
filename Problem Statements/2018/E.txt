@@ -1,0 +1,48 @@
+Problem E. Getting a Jump on Crime
+Input file: standard input
+
+Output file: standard output
+
+Time limit: 2 seconds
+Memory limit: 256 megabytes
+
+Your friend Robin is a superhero. When you first found out about this, you figured “everybody needs a hobby, and this seems more exciting than stamp collecting”, but now you are really thankful that somebody is doing something about the crime in your hometown.
+
+Every night, Robin patrols the city by jumping from roof to roof and watching what goes on below. Naturally, superheroes need to respond to crises immediately, so Robin asked you for help in figuring out how to get around your hometown quickly.
+
+Your hometown is built on a square grid, where each block is w × w meters. Each block is filled by a single building. The buildings may have different heights. To get from one building to another (not necessarily adjacent) building, Robin makes a single jump from the center of the roof of the first building to the center of the roof of the second building. Robin cannot change direction while in the air, but can choose the angle at which to lift off.
+
+Of course, Robin only wants to perform jumps without colliding with any buildings. Such collisions do little damage to a superhero, but building owners tend to get irritated when someone crashes through their windows. You explain the physics to Robin: “All your jumps are done with the same initial velocity v, which has a horizontal component vₓ towards the destination and vertical component vᵧ upwards, so vₓ² + vᵧ² = v². As you travel, your horizontal velocity stays constant (vₓ(t) = vₓ), but your vertical velocity is affected by gravity (vᵧ(t) = vᵧ - t·g), where g = 9.80665 m/s² in your hometown. Naturally, your cape allows you to ignore the effects of air resistance. This allows you to determine your flight path...”
+
+You need to determine which building roofs Robin can reach and the minimum number of jumps it takes to get to each roof.
+
+Input:
+The input starts with a line containing six integers dx, dy, w, v, lx, ly. These represent the size dx × dy of the city grid (1 ≤ dx, dy ≤ 20) in blocks, the width of each building (1 ≤ w ≤ 10³) in meters, Robin’s takeoff velocity (1 ≤ v ≤ 10³) in meters per second, and the coordinates (lx, ly) of Robin’s secret hideout (1 ≤ lx ≤ dx, 1 ≤ ly ≤ dy).
+
+The first line is followed by a description of the heights of the buildings in the city grid. The description consists of dy lines, each containing dx non-negative integers. The j-th line contains the heights for buildings (1, j), (2, j), ..., (dx, j). All heights are given in meters and are at most 10³.
+
+Output:
+Display the minimum number of jumps Robin needs to get from the secret hideout to the roof of each building. If there is no way to reach a building’s roof, display X instead of the number of jumps. Display the buildings in the same order as given in the input file, split into dy lines, each containing dx values.
+
+You may assume that changing the height of any building by up to 10⁻⁶ would not change the answers.
+
+Examples:
+Input:
+4 1 100 55 1 1
+10 40 60 10
+
+Output:
+0 1 1 1
+
+Input:
+4 4 100 55 1 1
+0 10 20 30
+10 20 30 40
+20 30 200 50
+30 40 50 60
+
+Output:
+0 1 1 2
+1 1 1 2
+1 1 X 2
+2 2 2 3

@@ -1,0 +1,42 @@
+Problem I. Triangles
+Input file: standard input
+
+Output file: standard output
+
+Time limit: 6 seconds
+Memory limit: 1024 megabytes
+
+For your trip to Beijing, you have brought plenty of puzzle books, many of them containing challenges like the following: how many triangles can be found in a specific geometric figure?
+
+While these puzzles keep your interest for a while, you quickly get bored with them and instead start thinking about how you might solve them algorithmically. Who knows, maybe a problem like that will actually be used in this year’s contest. Well, guess what? Today is your lucky day!
+
+Input:
+The first line of input contains two integers r and c (1 ≤ r ≤ 3000, 1 ≤ c ≤ 6000), specifying the picture size, where r is the number of rows of vertices and c is the number of columns. Following this are 2r − 1 lines, each of them having at most 2c − 1 characters. Odd lines contain grid vertices (represented as lowercase `x` characters) and zero or more horizontal edges, while even lines contain zero or more diagonal edges. Specifically, picture lines with numbers 4k+1 have vertices in positions 1, 5, 9, 13, ... while lines with numbers 4k+3 have vertices in positions 3, 7, 11, 15, ... All possible vertices are represented in the input. Edges connecting vertices are represented by `---`, `/`, or `\`. Any other character in the input is a space. Note that trailing whitespace may be omitted.
+
+Output:
+Display the number of triangles (of any size) formed by grid edges in the input picture.
+
+Examples:
+Input:
+3 3
+x---x
+\   /
+x
+/   \
+x   x
+
+Output:
+1
+
+Input:
+4 10
+x   x---x---x   x
+\ /       / \
+x x---x   x   x
+/   \   /   \ \
+x   x---x---x---x
+/ /     \   \ /   \
+x---x---x---x---x
+
+Output:
+12

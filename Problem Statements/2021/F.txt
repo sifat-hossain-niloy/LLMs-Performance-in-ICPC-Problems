@@ -1,0 +1,49 @@
+Problem F
+Islands from the Sky
+Time limit: 2 seconds
+
+The island group of Iceepeecee needs an exact map to apportion government funds. The plan is to install line-scan cameras on planes. These cameras point straight downwards and collect images orthogonal to the flight path. Iceepeecee wants to ensure each island is entirely observed by at least one flight.
+
+Flight paths follow straight line segments in three-dimensional space, described by their start and end coordinates. The goal is to find the smallest aperture angle θ (in degrees) such that the islands can be fully surveyed. If it's not possible, the result should be "impossible."
+
+Input
+
+The input starts with two integers n and m, the number of islands and flight paths, respectively (1 ≤ n, m ≤ 100). Then, for each island, there is an integer ni (3 ≤ ni ≤ 100), followed by ni lines specifying the vertices of the island polygon. Each flight path is given as six integers representing its 3D start and end coordinates.
+
+Output
+
+Output the smallest angle θ (in degrees) needed for the survey. The answer should be exact to an absolute or relative error of 10−6. If no such angle exists, output "impossible."
+
+Sample Input 1
+3 2
+3
+20 30
+50 50
+10 50
+4
+40 20
+60 10
+75 20
+60 30
+4
+45 60
+55 55
+60 60
+55 65
+0 30 20 78 70 5
+55 0 20 70 60 10
+
+Sample Output 1
+48.031693036
+
+Sample Input 2
+1 1
+4
+0 0
+10 0
+10 10
+0 10
+5 5 10 15 5 10
+
+Sample Output 2
+impossible

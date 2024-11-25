@@ -1,0 +1,38 @@
+Problem L
+Where Am I?
+Time limit: 2 seconds
+
+You are in a test area represented as an unbounded Cartesian grid. Some grid cells contain markers, and others are empty. You start at an unknown grid cell and explore the area in an expanding clockwise spiral. You stop exploring once the observed sequence of cells uniquely identifies your starting position. Determine how long this process might take.
+
+Input
+
+The first line contains two integers dx and dy (1 ≤ dx, dy ≤ 100), the dimensions of the described part of the grid. The next dy lines each contain dx characters, where each character is either '.' (empty) or 'X' (marker). The character at position (i, dy−j+1) corresponds to the grid cell at (i, j). All grid cells outside the described range are empty.
+
+Output
+
+Output three lines:
+1. The expected number of steps to identify the starting position, assuming uniform random distribution.
+2. The maximum number of steps needed.
+3. All starting coordinates (x, y) requiring the maximum number of steps, sorted by increasing y and x.
+
+Sample Input 1
+5 5
+....X
+.X...
+.....
+X..X.
+..X..
+
+Sample Output 1
+9.960
+18
+(1,4) (4,5)
+
+Sample Input 2
+5 1
+..XX.
+
+Sample Output 2
+4.600
+7
+(1,1) (5,1)
