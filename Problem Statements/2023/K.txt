@@ -1,0 +1,61 @@
+Problem K: Alea Iacta Est  
+Time limit: 10 seconds  
+
+You play a game with multiple fair six-sided dice. Each die’s face displays a single symbol. The objective of the game is to roll the dice and create a valid word from the symbols on top of each die. If you cannot form a word, you may reroll the dice for another attempt.  
+
+When you roll a die, it lands on any one of its faces with equal probability. What is the expected number of rolls needed to make a valid word, assuming you use an optimal strategy?  
+
+Input  
+The first line of input contains two numbers d and w, where d (1 ≤ d ≤ 6) is the number of dice and w (1 ≤ w ≤ 2 · 105) is the number of valid words in the dictionary. The following d lines each have 6 symbols, one for each face of the die. The final w lines contain w distinct valid words in the dictionary. Every word has exactly d symbols.  
+
+All symbols in the input are either uppercase letters (A–Z) or digits (0–9).  
+
+Output  
+If it is possible to make a valid word, output the expected number of rolls needed to make a valid word when using an optimal strategy. Otherwise, output impossible. Your answer should have an absolute or relative error of at most 10−6.  
+
+Sample Input 1:  
+5 8  
+ABCDEP  
+AEHOXU  
+AISOLR  
+ABCDEF  
+ABCSCC  
+PARSE  
+PAUSE  
+PHASE  
+POISE  
+PROSE  
+PULSE  
+PURSE  
+PEACE  
+
+Sample Output 1:  
+9.677887141  
+
+Sample Input 2:  
+2 1  
+AAAAAA  
+BBBBBB  
+AB  
+
+Sample Output 2:  
+1.0  
+
+Sample Input 3:  
+3 1  
+123456  
+123456  
+123456  
+666  
+
+Sample Output 3:  
+10.555444555  
+
+Sample Input 4:  
+2 1  
+ABCDEF  
+GHI234  
+AB  
+
+Sample Output 4:  
+impossible  
